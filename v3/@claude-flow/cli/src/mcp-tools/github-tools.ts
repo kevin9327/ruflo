@@ -181,7 +181,7 @@ export const githubTools: MCPTool[] = [
       let owner = (input.owner as string) || '';
       let repo = (input.repo as string) || '';
       if (remoteUrl && (!owner || !repo)) {
-        const m = remoteUrl.match(/[:/]([^/]+)\/([^/.]+?)(?:\.git)?$/);
+        const m = remoteUrl.match(/[:/]([^/]+)\/([^/]+?)(?:\.git)?$/);
         if (m) { owner = owner || m[1]; repo = repo || m[2]; }
       }
       const repoKey = `${owner || 'local'}/${repo || 'repo'}`;
